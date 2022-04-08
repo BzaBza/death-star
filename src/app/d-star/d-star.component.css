@@ -1,0 +1,14 @@
+.corpus-wrapper {
+  overflow: hidden;
+  position: absolute;
+  bottom: -10rem;
+  right: -10rem;
+}
+
+.main-start-corpus {
+  width: 30rem;
+  height: 30rem;
+  border: 2px solid rgba(25, 118, 210, 0.21);
+  border-radius: 100%;
+  background-color: #333333;
+}

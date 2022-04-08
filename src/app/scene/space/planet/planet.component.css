@@ -1,0 +1,9 @@
+.planet {
+  border-radius: 100%;
+  background-image: url("../../../../assets/earth.png");
+  width: 500px;
+  height: 500px;
+  background-position: center;
+  z-index: 1;
+  position: absolute;
+}

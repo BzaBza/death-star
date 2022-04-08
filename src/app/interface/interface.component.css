@@ -1,0 +1,9 @@
+.interface {
+  width: 20rem;
+  height: 50rem;
+  background-color: rgba(240, 251, 255, 0.94);
+  position: absolute;
+  left: 0;
+  top: 5rem;
+  z-index: 10;
+}
