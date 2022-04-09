@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SpaceBackgroundComponent } from './space-background/space-background.component';
 import { PlanetComponent } from './planet/planet.component';
+import {InstrumentModule} from "../../instrument/instrunet.module";
 
 
 
@@ -14,8 +15,9 @@ import { PlanetComponent } from './planet/planet.component';
     SpaceBackgroundComponent,
     PlanetComponent
   ],
-  imports: [
-    CommonModule
-  ]
+    imports: [
+        CommonModule,
+        InstrumentModule
+    ]
 })
 export class SpaceModule { }

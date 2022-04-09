@@ -1,1 +1,13 @@
-<div class="planet"></div>
+<div class="planet" appPatternGenerator [maxSize]="500" [minSize]="500" [colorScope]="100" [alfaColorScope]="1">
+  <div class="planet-shadow">
+    <div class="elements-wrapper">
+      <div class="planet-element" *ngFor="let element of planetItems"
+           appPatternGenerator
+           appPositionPattern
+           [colorScope]="planetItems.length / 10"
+           [maxSize]="120"
+           [alfaColorScope]="0.2"
+           [minSize]="15"></div>
+    </div>
+  </div>
+</div>
