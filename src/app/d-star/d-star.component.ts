@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-d-star',
@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./d-star.component.css']
 })
 export class DStarComponent implements OnInit {
+  fire: boolean = true;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

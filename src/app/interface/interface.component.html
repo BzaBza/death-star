@@ -1,8 +1,13 @@
 <div class="interface">
   <h1>Interface</h1>
-  <div><input type="text"></div>
-  <div><input type="text"></div>
-  <div><input type="text"></div>
-  <div><input type="text"></div>
-  <div><input type="text"></div>
+  <div>
+    <button (click)="navigationState = navigationEnum.PlanetInfo">
+      Planet info
+    </button>
+    <button (click)="navigationState = navigationEnum.WeaponSettings">
+      Weapon settings
+    </button>
+  </div>
+  <app-planet-info [hidden]="navigationState !== navigationEnum.PlanetInfo"></app-planet-info>
+  <app-weapon-settings [hidden]="navigationState !== navigationEnum.WeaponSettings"></app-weapon-settings>
 </div>

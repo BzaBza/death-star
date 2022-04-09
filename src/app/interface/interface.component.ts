@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NavigationEnum} from "./navigation.enum";
 
 @Component({
   selector: 'app-interface',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./interface.component.css']
 })
 export class InterfaceComponent implements OnInit {
-
+  navigationEnum = NavigationEnum;
+  navigationState!: NavigationEnum;
   constructor() { }
 
   ngOnInit(): void {
