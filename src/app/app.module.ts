@@ -2,9 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import {InterfaceModule} from "./interface/interface.module";
-import {DStarModule} from "./d-star/d-star.module";
-import {SceneModule} from "./scene/scene.module";
+import {InterfaceModule} from "./main/interface/interface.module";
+import {DStarModule} from "./main/d-star/d-star.module";
+import {SceneModule} from "./main/scene/scene.module";
+import { NG_ENTITY_SERVICE_CONFIG } from '@datorama/akita-ng-entity-service';
+import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -14,9 +17,10 @@ import {SceneModule} from "./scene/scene.module";
     BrowserModule,
     InterfaceModule,
     DStarModule,
-    SceneModule
+    SceneModule,
+    environment.production ? [] : AkitaNgDevtools.forRoot(),
   ],
-  providers: [],
+  providers: [{ provide: NG_ENTITY_SERVICE_CONFIG, useValue: { baseUrl: 'https://jsonplaceholder.typicode.com' }}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,8 +1,8 @@
-import {Directive, ElementRef, Input, OnChanges} from '@angular/core';
+import {Directive, ElementRef, EventEmitter, Input, OnChanges, Output} from '@angular/core';
 import {ColorPatternInterface} from "./color-pattern.interface";
 
 @Directive({
-  selector: '[appPatternGenerator]'
+  selector: '[appPositionPatternGenerator]'
 })
 export class PatternGeneratorDirective implements OnChanges{
 
@@ -10,6 +10,8 @@ export class PatternGeneratorDirective implements OnChanges{
   @Input() minSize: number = 1;
   @Input() colorScope: number = 1;
   @Input() alfaColorScope: number = 1;
+  @Input() shadowConfig: string = '';
+  @Output() generatedColor = new EventEmitter<string>();
 
   elementParams!: ColorPatternInterface;
   element: ElementRef;
@@ -32,7 +34,11 @@ export class PatternGeneratorDirective implements OnChanges{
     this.element.nativeElement.style.borderRadius = this.getRandomValue(100, 40) + '%';
     this.element.nativeElement.style.display = 'block';
     this.element.nativeElement.style.position = 'absolute';
-    this.element.nativeElement.style.boxShadow = '10px 0 40px 120px ' + this.color;
+    if(this.shadowConfig) {
+      this.element.nativeElement.style.boxShadow = this.shadowConfig + ' ' + this.color;
+    } else {
+      this.element.nativeElement.style.boxShadow = '10px 0 40px 120px ' + this.color;
+    }
   }
 
   createElement(): void{
@@ -59,5 +65,6 @@ export class PatternGeneratorDirective implements OnChanges{
     let b = this.getRandomValue(this.colorScope,this.colorScope / (this.colorScope - .9));
     let a = this.getRandomValue(this.alfaColorScope, this.alfaColorScope);
     this.color = `rgba(${r},${g},${b},${a})`;
+    this.generatedColor.emit(this.color)
   }
 }

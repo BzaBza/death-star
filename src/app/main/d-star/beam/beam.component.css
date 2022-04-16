@@ -1,0 +1,106 @@
+.beam-wrapper {
+  animation: grow;
+  animation-duration: 15s;
+  animation-delay: 0s;
+  animation-play-state: running;
+  animation-fill-mode: none;
+  animation-timing-function: linear;
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+  overflow: hidden;
+}
+
+.beam {
+  width: 2px;
+  height: 100rem;
+  position: absolute;
+  background-color: #fdfdfd;
+  animation: grow-beam;
+  animation-duration: 5s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-fill-mode: none;
+  animation-timing-function: linear;
+}
+
+.top {
+  transform: rotate(295deg);
+  bottom: 0;
+  right: 985px;
+}
+
+.bottom {
+  transform: rotate(-45deg);
+  right: 942px;
+  bottom: 19px;
+}
+
+.circle {
+  border-radius: 50%;
+  position: absolute;
+  border: 1px solid rgba(128, 0, 11, 0.68);
+  animation: grow-circle;
+  animation-duration: 12s;
+  animation-delay: 7s;
+  animation-play-state: running;
+  animation-fill-mode: none;
+  animation-timing-function: linear;
+  bottom: 280px;
+  right: 400px;
+  transform: rotate(30deg);
+
+  z-index: 5;
+}
+
+@keyframes grow-circle {
+  0% {
+    border-width: 3px;
+    margin-left: 0;
+    margin-bottom: 0;
+    width: 13rem;
+    height: 16.2rem;
+    box-shadow: inset 0 0 20px 1px rgba(128, 0, 11, 0.93);
+  }
+  100% {
+    border-width: 5px;
+    width: 2px;
+    height: 7px;
+    margin-right: 45rem;
+    margin-bottom: 39rem;
+    box-shadow: inset 1px 4px 1px rgba(128, 0, 11, 0.93);
+  }
+}
+
+
+@keyframes grow-beam {
+  0% {
+    width: .1rem;
+    box-shadow:  0 0 20px 1px rgba(128, 0, 11, 0.93);
+  }
+
+  80% {
+    width: .4rem;
+  }
+  100% {
+    width: .04rem;
+    box-shadow:  0 0 1px 1px rgba(128, 0, 11, 0.93);
+  }
+}
+
+@keyframes grow {
+  0% {
+    height: 1rem;
+    width: 1rem;
+  }
+  80% {
+    height: 54rem;
+    width: 54rem;
+  }
+  100% {
+    height: 10rem;
+    width: 10rem;
+  }
+}

@@ -1,0 +1,58 @@
+.crater {
+  border-radius: 100%;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  /*animation: crater-creation;*/
+  animation-duration: 29s;
+  animation-delay: 0s;
+  animation-play-state: running;
+  animation-fill-mode: none;
+  animation-timing-function: linear;
+  box-shadow: inset 0 0 22px 0 rgb(10 10 10 / 73%);
+}
+
+.crater-center {
+  display: block;
+  border-radius: 100%;
+  transform: rotate(40deg);
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0,0,0,1) 7%, rgba(0,0,0,0) 50%);
+  box-shadow: 0 0 22px 0 rgb(10 10 10 / 73%);
+  /*animation: center-crater-creation;*/
+  animation-duration: 29s;
+  animation-delay: 0s;
+  animation-play-state: running;
+  animation-fill-mode: none;
+  animation-timing-function: linear;
+}
+
+@keyframes crater-creation{
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    box-shadow: inset 0 0 22px 0 rgb(10 10 10 / 73%);
+  }
+}
+
+@keyframes center-crater-creation{
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    background: radial-gradient(circle, rgba(0,0,0,1) 7%, rgba(0,0,0,0) 50%);
+    box-shadow: 0 0 22px 0 rgb(10 10 10 / 73%);
+  }
+}
