@@ -25,42 +25,33 @@ export class GridPatternDirective implements OnChanges {
 
   setShape() {
     const line = this.getElementLineNumber();
-    if (line === 1) {
-      this.element.nativeElement.style.transform = `
-      rotateX(${this.getRotateX()}deg)
-      rotateY(${this.getRotateY()}deg)
-      translateZ(${this.setTranslateZ}px)
-      matrix3d(1.5, 0, 0, 0.009, 0, .6, 0, 0, 0, 0, 1, 0, 1, 0, -3, 1.9)`;
-      this.element.nativeElement.style.height = '83px'
-      this.element.nativeElement.style.width = '142px'
+    let params = `rotateX(${this.getRotateX()}deg)
+                  rotateY(${this.getRotateY()}deg)
+                  translateZ(${this.setTranslateZ}px)`
+    let width;
+    let height;
 
+    if (line === 1) {
+      params = params + `matrix3d(1.5, 0, 0, 0.009, 0, .6, 0, 0, 0, 0, 1, 0, 1, 0, -3, 1.9)`;
+      height = '83px'
+      width = '142px'
     } else if (line === 2) {
-      this.element.nativeElement.style.transform = `
-      rotateX(${this.getRotateX()}deg)
-      rotateY(${this.getRotateY()}deg)
-      translateZ(${this.setTranslateZ}px)
-      matrix3d(1, 0, 0, 0.0017, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)`;
-      this.element.nativeElement.style.height = '127px'
-      this.element.nativeElement.style.width = '124px'
+      params = params + `matrix3d(1, 0, 0, 0.0017, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)`;
+      height = '127px'
+      width = '124px'
     } else if (line === 4) {
-      this.element.nativeElement.style.transform = `
-      rotateX(${this.getRotateX()}deg)
-      rotateY(${this.getRotateY()}deg)
-      translateZ(${this.setTranslateZ}px)
-      matrix3d(1, 0, 0, 0.0017, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)`;
-      this.element.nativeElement.style.height = '127px'
-      this.element.nativeElement.style.width = '124px'
+      params = params + `matrix3d(1, 0, 0, 0.0017, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)`;
+      height = '127px'
+      width = '124px'
     } else if (line === 5) {
-      this.element.nativeElement.style.transform = `
-      rotateX(${this.getRotateX()}deg)
-      rotateY(${this.getRotateY()}deg)
-      translateZ(${this.setTranslateZ}px)
-      matrix3d(1.5, 0, 0, 0.009, 0, .6, 0, 0, 0, 0, 1, 0, 1, 0, -3, 1.9)`;
-      this.element.nativeElement.style.height = '83px'
-      this.element.nativeElement.style.width = '142px'
-    } else {
-      this.element.nativeElement.style.transform = `rotateX(${this.getRotateX()}deg) rotateY(${this.getRotateY()}deg) translateZ(${this.setTranslateZ}px)`;
+      params = params + `matrix3d(1.5, 0, 0, 0.009, 0, .6, 0, 0, 0, 0, 1, 0, 1, 0, -3, 1.9)`;
+      height = '83px'
+      width = '142px'
     }
+
+    this.element.nativeElement.style.transform = params;
+    this.element.nativeElement.style.height = height;
+    this.element.nativeElement.style.width = width;
   }
 
 
@@ -113,8 +104,7 @@ export class GridPatternDirective implements OnChanges {
       return 300;
     } else if (this.elementIndex < 65) {
       return 330;
-    }
-    else if (this.elementIndex < 70) {
+    } else if (this.elementIndex < 70) {
       return 360;
     }
     return 0;
