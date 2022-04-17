@@ -8,7 +8,7 @@ import {Observable} from "rxjs";
   styleUrls: ['./planet-grid.component.css'],
 })
 export class PlanetGridComponent implements OnInit {
-  gridDensity: Array<number> = Array.from(Array(130).keys());
+  gridDensity: Array<number> = Array.from(Array(70).keys());
   generatedColor!: string;
   hitElements$: Observable<Array<number>> = this.planetQuery.hitElements;
 

@@ -11,10 +11,9 @@
     <div class="grid">
       <div class="grid-element"
            *ngFor="let gridElement of gridDensity; index as i"
-           [ngStyle]="{'background-color': generatedColor}"
            appGridPatternGenerator
            [elementIndex]="i"
-           [setTranslateZ]="(hitElements$ | async)?.includes(i) ? 290 : 260"
+           [setTranslateZ]="250"
            [itemsSum]="gridDensity.length">
         <app-destruction-effect *ngIf="(hitElements$ | async)?.includes(i)"></app-destruction-effect>
       </div>

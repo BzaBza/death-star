@@ -7,7 +7,7 @@
   animation: explosion-center-grow;
   width: 4rem;
   height: 4rem;
-  animation-duration: 25s;
+  animation-duration: 21s;
   animation-delay: 0s;
   animation-play-state: running;
   animation-fill-mode: none;
@@ -20,7 +20,7 @@
   animation: explosion-grow;
   border-radius: 100%;
   transform: rotate(40deg);
-  animation-duration: 25s;
+  animation-duration: 21s;
   animation-delay: 0s;
   animation-play-state: running;
   animation-fill-mode: none;
@@ -33,11 +33,11 @@
     box-shadow: 0 0 0 0 rgba(128, 0, 11, 0.93);
   }
   70% {
-    box-shadow: 0 0 100px 155px rgba(128, 0, 11, 0.93);
+    box-shadow: 0 0 20px 35px rgba(128, 0, 11, 0.93);
   }
   100% {
     background-color: rgba(128, 0, 11, 0.93);
-    box-shadow: 0 0 10px 15px rgba(128, 0, 11, 0.93);
+    box-shadow: 0 0 10px 15px rgba(128, 0, 11, 0.0);
   }
 }
 
@@ -46,12 +46,12 @@
     box-shadow: 0 0 20px 12px rgba(128, 0, 11, 0.93);
   }
   50% {
-    box-shadow: 0 0 410px 306px rgba(128, 0, 11, 0.93);
+    box-shadow: 0 0 20px 36px rgba(128, 0, 11, 0.93);
   }
   80% {
-    box-shadow: 0 0 100px 112px rgba(128, 0, 11, 0.93);
+    box-shadow: 0 0 11px 12px rgba(128, 0, 11, 0.33);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(128, 0, 11, 0.93);
+    box-shadow: 0 0 11px 12px rgba(128, 0, 11, 0.0);
   }
 }

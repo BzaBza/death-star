@@ -6,8 +6,6 @@
   display: flex !important;
   justify-content: center;
   align-items: center;
-  background-color: #333333;
-  overflow: hidden;
 }
 
 .grid-wrapper {
@@ -33,11 +31,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #fff;
+  backface-visibility: hidden;
 }
 
 .translateZ.rotateY{
-  /*animation: translateZ .2s ease-out, rotateY 45s .5s infinite linear;*/
+  animation: translateZ .2s ease-out, rotateY 45s .5s infinite linear;
 }
 
 @keyframes rotateY {

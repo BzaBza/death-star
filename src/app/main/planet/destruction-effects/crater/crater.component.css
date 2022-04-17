@@ -4,7 +4,7 @@
   height: 4rem;
   display: flex;
   justify-content: center;
-  /*animation: crater-creation;*/
+  animation: crater-creation;
   animation-duration: 29s;
   animation-delay: 0s;
   animation-play-state: running;
@@ -22,7 +22,7 @@
   height: 100%;
   background: radial-gradient(circle, rgba(0,0,0,1) 7%, rgba(0,0,0,0) 50%);
   box-shadow: 0 0 22px 0 rgb(10 10 10 / 73%);
-  /*animation: center-crater-creation;*/
+  animation: center-crater-creation;
   animation-duration: 29s;
   animation-delay: 0s;
   animation-play-state: running;
