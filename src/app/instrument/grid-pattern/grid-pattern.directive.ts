@@ -31,22 +31,14 @@ export class GridPatternDirective implements OnChanges {
     let width;
     let height;
 
-    if (line === 1) {
-      params = params + `matrix3d(1.5, 0, 0, 0.009, 0, .6, 0, 0, 0, 0, 1, 0, 1, 0, -3, 1.9)`;
-      height = '83px'
-      width = '142px'
-    } else if (line === 2) {
-      params = params + `matrix3d(1, 0, 0, 0.0017, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)`;
-      height = '127px'
-      width = '124px'
-    } else if (line === 4) {
-      params = params + `matrix3d(1, 0, 0, 0.0017, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)`;
-      height = '127px'
-      width = '124px'
-    } else if (line === 5) {
-      params = params + `matrix3d(1.5, 0, 0, 0.009, 0, .6, 0, 0, 0, 0, 1, 0, 1, 0, -3, 1.9)`;
-      height = '83px'
-      width = '142px'
+    if (line === 1 || line === 5) {
+      params = params + `matrix3d(0.5, 0, 0, 0.0004, 0, 0.2, 0, 0, 0, 0, 1, 0, 1, 0, -1, 1.3)`;
+      height = '588px'
+      width = '482px'
+    } else if (line === 2 || line === 4) {
+      params = params + `matrix3d(.7, 0, 0, 0.0017, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1.4)`;
+      height = '159px'
+      width = '213px'
     }
 
     this.element.nativeElement.style.transform = params;
