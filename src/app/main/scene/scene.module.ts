@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {SpaceModule} from "./space/space.module";
-import { SceneComponent } from './scene.component';
+import {SceneComponent} from './scene.component';
 import {PlanetModule} from "../planet/planet.module";
 
 @NgModule({
@@ -14,7 +14,8 @@ import {PlanetModule} from "../planet/planet.module";
   imports: [
     CommonModule,
     SpaceModule,
-    PlanetModule
+    PlanetModule,
   ]
 })
-export class SceneModule { }
+export class SceneModule {
+}

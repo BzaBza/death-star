@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-scene',
   templateUrl: './scene.component.html',
-  styleUrls: ['./scene.component.css']
+  styleUrls: ['./scene.component.css'],
 })
-export class SceneComponent implements OnInit {
+export class SceneComponent {
 
-  constructor() { }
+  animal!: string;
+  name!: string;
 
-  ngOnInit(): void {
-  }
-
+  constructor() {}
 }
